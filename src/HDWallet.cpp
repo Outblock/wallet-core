@@ -126,6 +126,12 @@ PrivateKey HDWallet::getKey(TWCoinType coin, const DerivationPath& derivationPat
     }
 }
 
+PrivateKey HDWallet::getCurveKey(TWCurve curve, const DerivationPath& derivationPath) const {
+    auto node = getNode(*this, curve, derivationPath);
+    auto data = Data(node.private_key, node.private_key + PrivateKey::size);
+    return PrivateKey(data);
+}
+
 std::string HDWallet::getRootKey(TWCoinType coin, TWHDVersion version) const {
     const auto curve = TWCoinTypeCurve(coin);
     auto node = getMasterNode(*this, curve);

@@ -1051,6 +1051,30 @@
     }
   },
   {
+    "id": "flow",
+    "name": "Flow",
+    "coinId": 539,
+    "symbol": "flow",
+    "slip44": 539,
+    "decimals": 8,
+    "blockchain": "Flow",
+    "derivationPath": "m/44'/539'/0'/0/0",
+    "curve": "nist256p1",
+    "publicKeyType": "nist256p1",
+    "hrp": "flow",
+    "explorer": {
+      "url": "https://flowscan.org",
+      "txPath": "/transaction/",
+      "accountPath": "/account/"
+    },
+    "info": {
+      "url": "https://onflow.org/",
+      "source": "https://github.com/onflow/flow-go",
+      "rpc": "",
+      "documentation": "https://docs.onflow.org"
+    }
+  },
+  {
     "id": "binance",
     "name": "Binance",
     "displayName": "BNB",

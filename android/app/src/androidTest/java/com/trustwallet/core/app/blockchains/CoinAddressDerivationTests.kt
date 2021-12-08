@@ -100,5 +100,6 @@ class CoinAddressDerivationTests {
         CRYPTOORG -> assertEquals("cro16fdf785ejm00jf9a24d23pzqzjh2h05klxjwu8", address)
         CELO -> assertEquals("0xea1ac53e7Ccb5b47cdE341C118615Ef1862e3CF5", address)
         OSMOSIS -> assertEquals("osmo142j9u5eaduzd7faumygud6ruhdwme98qclefqp", address)
+        else -> {}
     }
 }

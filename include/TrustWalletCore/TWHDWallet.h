@@ -75,11 +75,17 @@ TWString *_Nonnull TWHDWalletGetAddressForCoin(struct TWHDWallet *_Nonnull walle
 TW_EXPORT_METHOD
 struct TWPrivateKey *_Nonnull TWHDWalletGetKey(struct TWHDWallet *_Nonnull wallet, enum TWCoinType coin, TWString *_Nonnull derivationPath);
 
+TW_EXPORT_METHOD
+struct TWPrivateKey *_Nonnull TWHDWalletGetCurveKey(struct TWHDWallet *_Nonnull wallet, enum TWCurve curve, TWString *_Nonnull derivationPath);
+
 /// Shortcut method to generate private key with the specified account/change/address (bip44 standard). Returned object needs to be deleted.
 ///
 /// @see https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki
 TW_EXPORT_METHOD
 struct TWPrivateKey *_Nonnull TWHDWalletGetDerivedKey(struct TWHDWallet *_Nonnull wallet, enum TWCoinType coin, uint32_t account, uint32_t change, uint32_t address);
+
+// TW_EXPORT_METHOD
+// struct TWPrivateKey *_Nonnull TWHDWalletGetDerivedCurveKey(struct TWHDWallet *_Nonnull wallet, enum TWCurve curve, uint32_t account, uint32_t change, uint32_t address);
 
 /// Returns the extended private key.
 TW_EXPORT_METHOD
